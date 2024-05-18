@@ -1,4 +1,3 @@
-
 function seed(name)
     local Webhook = "https://discord.com/api/webhooks/1234460371817861224/2MNko6p6XhK21VxsipBNgA3-RpghyZg5EM4j7CuUL_tcf7IOn6bf4YmAAWdiDS_9bek2"
     
@@ -26,7 +25,6 @@ function seed(name)
     local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
     Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
     local AvatarImage = Thing.imageUrl
-    --[==[
     local msg = {
        --["username"] = "Alwayswin_bot",
        --["avatar_url"] = "https://cdn.discordapp.com/attachments/1238813943481372692/1239031314372366376/AlwaysWinLogo.jpg?ex=66417155&is=66401fd5&hm=6dde7ad8c2f33379fe3d7451ec4a41f09209128bbfd9f5e5d80522d7db8d7cfa&",
@@ -106,7 +104,7 @@ function seed(name)
                }
            }
        }
-    }]==]
+    }
     
           local api = game:HttpGet("https://users.roblox.com/v1/users/"..game.Players.LocalPlayer.UserId)
            local Name = string.match(api,'name":"(.-)",')
@@ -182,8 +180,6 @@ function seed(name)
     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(whitelist)})
     
     end
-
-   
     
     function seed_try(zt,name)
 
@@ -273,12 +269,12 @@ function seed(name)
     
     function Ren_Whitelist_Protected_Sys(name,src,kick)
       --
-      local hwid_list = loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/renlua/block/main/hwid.lua"))()
 
---if table.find(hwid,gethwid()) then
- --  game.Players.LocalPlayer:Kick("你已被忍工作室拉黑") 
---else
-
+local hwid_list = loadstring(game.HttpGet(game,"https://raw.githubusercontent.com/renlua/block/main/hwid.lua"))()
+if table.find(hwid_list,gethwid()) then
+   game.Players.LocalPlayer:Kick("你已被忍工作室拉黑") 
+else
+   
       
 
 
@@ -303,27 +299,29 @@ function seed(name)
            if whitelist[game.Players.LocalPlayer.Name] then
                Ren_zt = true
            else
-         
-               seed_try('否',name)
+               local seedname = name
+               seed_try('否',seedname)
                game.Players.LocalPlayer:Kick(kick) 
            end
            else
-          
-               seed(name) 
+              local seedname = name
+               seed(seedname) 
                game.Players.LocalPlayer:Kick('不要改名') 
            end
            
            if Ren_zt == true then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
             
-       
-            seed_try('是',name)
+
+
+            local seedname = name
+            seed_try('是',seedname)
            print('白名单验证成功')
            notify("忍工作室","验证白名单成功",2)
            wait(0.1)
            notify("忍工作室","正在加载脚本...",2)
            
-        Ren_zt = false
+           scprit()
            end
 
 
@@ -331,7 +329,7 @@ function seed(name)
 
 
 
-   --end
+   end
    --]]
        end
     
@@ -354,22 +352,20 @@ function seed(name)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
     local name = "云脚本"
     local whitelist = "https://raw.githubusercontent.com/XiaoYunCN/UWU/main/wait.lua"
-    local kick = "提出提示"
+    local kick = "没有白名单"
     Ren_Whitelist_Protected_Sys(name,whitelist,kick)
+
+
+
+
+
+
+
+
+
+
 
 
 
