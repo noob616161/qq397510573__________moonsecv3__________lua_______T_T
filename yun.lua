@@ -304,12 +304,12 @@ function seed(name)
                Ren_zt = true
            else
                local seedname = name
-               ---seed_try('否',seedname)
+               seed_try('否',seedname)
                game.Players.LocalPlayer:Kick(kick) 
            end
            else
               local seedname = name
-               --seed(seedname) 
+               seed(seedname) 
                game.Players.LocalPlayer:Kick('不要改名') 
            end
            
@@ -317,7 +317,7 @@ function seed(name)
             loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
             
             local seedname = name
-            --seed_try('是',seedname)
+            seed_try('是',seedname)
            print('白名单验证成功')
            notify("忍工作室","验证白名单成功",2)
            wait(0.1)
