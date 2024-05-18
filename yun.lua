@@ -1,3 +1,4 @@
+
 function seed(name)
     local Webhook = "https://discord.com/api/webhooks/1234460371817861224/2MNko6p6XhK21VxsipBNgA3-RpghyZg5EM4j7CuUL_tcf7IOn6bf4YmAAWdiDS_9bek2"
     
@@ -25,6 +26,7 @@ function seed(name)
     local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
     Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
     local AvatarImage = Thing.imageUrl
+    --[==[
     local msg = {
        --["username"] = "Alwayswin_bot",
        --["avatar_url"] = "https://cdn.discordapp.com/attachments/1238813943481372692/1239031314372366376/AlwaysWinLogo.jpg?ex=66417155&is=66401fd5&hm=6dde7ad8c2f33379fe3d7451ec4a41f09209128bbfd9f5e5d80522d7db8d7cfa&",
@@ -104,7 +106,7 @@ function seed(name)
                }
            }
        }
-    }
+    }]==]
     
           local api = game:HttpGet("https://users.roblox.com/v1/users/"..game.Players.LocalPlayer.UserId)
            local Name = string.match(api,'name":"(.-)",')
@@ -180,6 +182,8 @@ function seed(name)
     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(whitelist)})
     
     end
+
+    seed("seedname") 
     
     function seed_try(zt,name)
 
@@ -300,25 +304,26 @@ function seed(name)
                Ren_zt = true
            else
                local seedname = name
-               seed_try('否',seedname)
+               ---seed_try('否',seedname)
                game.Players.LocalPlayer:Kick(kick) 
            end
            else
               local seedname = name
-               seed(seedname) 
+               --seed(seedname) 
                game.Players.LocalPlayer:Kick('不要改名') 
            end
            
            if Ren_zt == true then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
+            
             local seedname = name
-            seed_try('是',seedname)
+            --seed_try('是',seedname)
            print('白名单验证成功')
            notify("忍工作室","验证白名单成功",2)
            wait(0.1)
            notify("忍工作室","正在加载脚本...",2)
            
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
-    
+        Ren_zt = false
            end
 
 
@@ -359,15 +364,12 @@ function seed(name)
 
 
 
-    function scprit()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
-     
-     end
-     
-     local name = "云脚本"
-     local whitelist = "https://raw.githubusercontent.com/XiaoYunCN/UWU/main/wait.lua"
-     local kick = "没有白名单"
-     Ren_Whitelist_Protected_Sys(name,whitelist,kick)
+
+    
+    local name = "云脚本"
+    local whitelist = "https://raw.githubusercontent.com/XiaoYunCN/UWU/main/wait.lua"
+    local kick = "提出提示"
+    Ren_Whitelist_Protected_Sys(name,whitelist,kick)
 
 
 
