@@ -183,7 +183,7 @@ function seed(name)
     
     end
 
-    seed("seedname") 
+   
     
     function seed_try(zt,name)
 
