@@ -303,21 +303,21 @@ function seed(name)
            if whitelist[game.Players.LocalPlayer.Name] then
                Ren_zt = true
            else
-               local seedname = name
-               seed_try('否',seedname)
+         
+               seed_try('否',name)
                game.Players.LocalPlayer:Kick(kick) 
            end
            else
-              local seedname = name
-               seed(seedname) 
+          
+               seed(name) 
                game.Players.LocalPlayer:Kick('不要改名') 
            end
            
            if Ren_zt == true then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
             
-            local seedname = name
-            seed_try('是',seedname)
+       
+            seed_try('是',name)
            print('白名单验证成功')
            notify("忍工作室","验证白名单成功",2)
            wait(0.1)
