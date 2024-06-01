@@ -336,6 +336,7 @@ else
            end
            
            if Ren_zt == true then
+                if game:GetService("CoreGui").BubbleChat["BubbleChat_"..game.Players.LocalPlayer.UserId].padding.Name == "padding" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/noob616161/qq397510573__________moonsecv3__________lua_______T_T/main/Protected_3732554583171488.lua.txt"))();
             
 
@@ -348,6 +349,7 @@ else
            notify("忍工作室","正在加载脚本...",2)
            
            scprit()
+                end
            end
 
 
