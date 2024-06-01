@@ -347,7 +347,7 @@ else
            wait(0.1)
            notify("忍工作室","正在加载脚本...",2)
            
-           scprit()
+           
                 
            end
 
